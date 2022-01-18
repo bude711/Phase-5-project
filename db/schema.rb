@@ -10,10 +10,36 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_01_14_183801) do
+ActiveRecord::Schema.define(version: 2022_01_14_205717) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "companies", force: :cascade do |t|
+    t.string "name"
+    t.string "edi_statement"
+    t.string "bipoc_info"
+    t.string "gender_info"
+    t.string "lgbtqia_info"
+    t.string "disability_info"
+    t.string "location"
+    t.string "website"
+    t.string "size"
+    t.string "networth"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "reviews", force: :cascade do |t|
+    t.integer "rating"
+    t.string "comment"
+    t.bigint "user_id", null: false
+    t.bigint "company_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["company_id"], name: "index_reviews_on_company_id"
+    t.index ["user_id"], name: "index_reviews_on_user_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "first_name"
@@ -25,4 +51,6 @@ ActiveRecord::Schema.define(version: 2022_01_14_183801) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  add_foreign_key "reviews", "companies"
+  add_foreign_key "reviews", "users"
 end
