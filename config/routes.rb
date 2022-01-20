@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  
+  namespace :api do
+
   resources :reviews, only: [:index, :show, :create, :destroy, :update] 
   resources :companies, only: [:index, :show, :create, :destroy, :update] 
   # resources :users
@@ -12,4 +13,6 @@ Rails.application.routes.draw do
   delete "/logout", to: "session#destroy"
 
   get "*path", to: "fallback#index", constraints: ->(req) { !req.xhr? && req.format.html? }
+  
+  end
 end

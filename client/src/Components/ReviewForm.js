@@ -1,84 +1,7 @@
-// import { useEffect, useState } from "react";
-
-// function ReviewForm({ companyId, onAddReview }) {
-//   const [reviews, setReviews] = useState([]);
-//   const [reviewId, setReviewId] = useState("");
-//   const [rating, setRating] = useState("");
-//   const [formErrors, setFormErrors] = useState([]);
-
-//   useEffect(() => {
-//     fetch("/reviews")
-//       .then((r) => r.json())
-//       .then(setReviews);
-//   }, []);
-
-//   function handleSubmit(e) {
-//     e.preventDefault();
-//     const formData = {
-//       company_id: companyId,
-//       review_id: reviewId,
-//       rating: parseInt(rating),
-//     };
-//     fetch("/appearances", {
-//       method: "POST",
-//       headers: {
-//         "Content-Type": "application/json",
-//       },
-//       body: JSON.stringify(formData),
-//     }).then((r) => {
-//       if (r.ok) {
-//         r.json().then((appearance) => {
-//           onAddGuest(appearance.guest);
-//           setFormErrors([]);
-//         });
-//       } else {
-//         r.json().then((err) => setFormErrors(err.errors));
-//       }
-//     });
-//   }
-
-//   return (
-//     <form onSubmit={handleSubmit}>
-//       <label htmlFor="guest_id">Guest:</label>
-//       <select
-//         id="guest_id"
-//         name="guest_id"
-//         value={guestId}
-//         onChange={(e) => setGuestId(e.target.value)}
-//       >
-//         <option value="">Select a Guest</option>
-//         {guests.map((guest) => (
-//           <option key={guest.id} value={guest.id}>
-//             {guest.name}
-//           </option>
-//         ))}
-//       </select>
-//       <label htmlFor="rating">Rating:</label>
-//       <input
-//         id="rating"
-//         name="rating"
-//         type="number"
-//         value={rating}
-//         onChange={(e) => setRating(e.target.value)}
-//       />
-//       {formErrors.length > 0
-//         ? formErrors.map((err) => (
-//             <p key={err} style={{ color: "red" }}>
-//               {err}
-//             </p>
-//           ))
-//         : null}
-//       <button type="submit">Add To Episode</button>
-//     </form>
-//   );
-// }
-
-// export default GuestForm;
-
 import React, { useState } from "react";
 import { useParams } from "react-router-dom"
 
-function ReviewForm({ onAddReview, user, companyId }) {
+function ReviewForm({ onAddReview, user}) {
     const { id } = useParams()
     
     const [reviewFormData, setReviewFormData] = useState({
@@ -101,7 +24,7 @@ function ReviewForm({ onAddReview, user, companyId }) {
         const newReview = {
             ...reviewFormData}
 
-        fetch(`/reviews`, {
+        fetch(`http://localhost:4000/api/reviews`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -112,10 +35,11 @@ function ReviewForm({ onAddReview, user, companyId }) {
             .then((r) => {
                 setReviewFormData({
                     id: "",
-                    comemnt: "",
+                    comment: "",
                     rating:"",
                 })
                 onAddReview(newReview)
+                window.location.reload(false)
                 
             })
     }
@@ -136,17 +60,15 @@ function ReviewForm({ onAddReview, user, companyId }) {
                 <input 
                     type="number"
                     name="rating"
+                    min="1" 
+                    max="5"
                     onChange={handleChange}
                     value={reviewFormData.rating}
-                    placeholder="Add rating here..."
+                    placeholder="0"
                     className="input-text"
                 />
-                    <input 
-                    type="submit"
-                    name="submit"
-                    value="Submit"
-                    className="submit"
-                />
+
+                <button  type="submit"> Submit </button>
                
                    </form>
         </div>

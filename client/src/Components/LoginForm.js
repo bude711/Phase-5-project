@@ -5,13 +5,13 @@ function LoginForm({ onLogin }) {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   
-  const [errors, setErrors] = useState();
+  const [errors, setErrors] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
 
   function handleSubmit(e) {
     e.preventDefault();
     setIsLoading(true);
-    fetch("/login", {
+    fetch("http://localhost:4000/api/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -42,7 +42,7 @@ function LoginForm({ onLogin }) {
       
         <h3>Password</h3>
         <input
-          type="text"
+          type="password"
           id="password"
           autoComplete="current-password"
           value={password}
@@ -55,14 +55,11 @@ function LoginForm({ onLogin }) {
           {isLoading ? "Loading..." : "Login"}
         </button>
       
+        {errors.map((err) => (
+          <p key={err}>{err}</p>
+        ))}
 
 
-      {/* {errors && errors.map(error => {
-          return <Error key={error}>{error}</Error>;
-        })} */}
-        {/* {errors.map((err) => (
-          <Error key={err}>{err}</Error>
-        ))} */}
     </form>
     </div>
   );

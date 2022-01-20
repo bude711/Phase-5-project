@@ -5,7 +5,7 @@ function Home() {
   const [companies, setCompanies] = useState([]);
 
   useEffect(() => {
-    fetch("/companies")
+    fetch("http://localhost:4000/api/companies")
       .then((r) => r.json())
       .then(setCompanies);
   }, []);

@@ -8,11 +8,12 @@ function Company({user, onDeleteReview}) {
     error: null,
     status: "pending",
   });
+
   const { id } = useParams();
 
 
   useEffect(() => {
-    fetch(`/companies/${id}`).then((r) => {
+    fetch(`http://localhost:4000/api/companies/${id}`).then((r) => {
       if (r.ok) {
         r.json().then((company) =>
           setCompany({ data: company, error: null, status: "resolved" })
@@ -39,7 +40,7 @@ function Company({user, onDeleteReview}) {
   }
 
   function handleDeleteClick(id) {
-    fetch(`/reviews/${id}`, {
+    fetch(`http://localhost:4000/api/reviews/${id}`, {
       method: "DELETE",
     }).then((r) => {
       if (r.ok) {
@@ -68,7 +69,7 @@ function Company({user, onDeleteReview}) {
       </div>
       <div className="card">
         <h2>Reviews</h2>
-        {company.reviews.map((review) => (
+        {company.reviews?.map((review) => (
           <div key={review.id}>
             <em>{review.comment}</em> 
            
@@ -79,7 +80,7 @@ function Company({user, onDeleteReview}) {
       </div>
       <div className="card">
         <h4>Add New Review</h4>
-        <ReviewForm user={user} companyId={company.id} onAddReview={handleAddReview} />
+        <ReviewForm user={user} onAddReview={handleAddReview} />
       </div>
     </section>
   );

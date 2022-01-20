@@ -18,7 +18,7 @@ function SignUpForm({ onLogin }) {
     e.preventDefault();
     setErrors([]);
     setIsLoading(true);
-    fetch("/signup", {
+    fetch("http://localhost:4000/api/signup", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -114,8 +114,10 @@ function SignUpForm({ onLogin }) {
       <p></p>
     
      
-     
-        <button type="submit">{isLoading ? "Loading..." : "Sign Up"}</button>
+      <button type="submit">{isLoading ? "Loading..." : "Sign Up"}</button>
+        {errors.map((err) => (
+          <p key={err}>{err}</p>
+        ))}
 
     </form>
     </div>

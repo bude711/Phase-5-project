@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Routes, Route } from "react-router-dom";
 import Login from "./Login";
-// import CompanyList from "./CompanyList";
 import Company from "./Company";
 import Home from "./Home";
 import NavBar from "./NavBar"
@@ -14,7 +13,7 @@ function App() {
 
   useEffect(() => {
     // auto-login
-    fetch("/me").then((r) => {
+    fetch("http://localhost:4000/api/me").then((r) => {
       if (r.ok) {
         r.json().then((user) => setUser(user))
       }
