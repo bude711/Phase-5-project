@@ -17,7 +17,7 @@ function Home() {
         <div key={company.id} className="card">
           <h2>
             <Link to={`/companies/${company.id}`}>
-              {company.name}
+            <img src={company.img_url} width="500" height="300" alt={company.name} />
             </Link>
           </h2>
         </div>

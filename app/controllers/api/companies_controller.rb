@@ -31,7 +31,7 @@ class Api::CompaniesController < ApplicationController
 private 
 
     def create_params 
-        params.permit(:name, :edi_statement, :bipoc_info, :gender_info, :lgbtqia_info, :disability_info, :location, :website, :size, :networth)
+        params.permit(:name, :img_url, :edi_statement, :bipoc_info, :gender_info, :lgbtqia_info, :disability_info, :location, :website, :size, :networth)
     end
 
 

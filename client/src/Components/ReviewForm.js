@@ -34,12 +34,13 @@ function ReviewForm({ onAddReview, user}) {
             .then((r) => r.json())
             .then((r) => {
                 setReviewFormData({
-                    id: "",
                     comment: "",
-                    rating:"",
+                    rating: "",
+                    user_id: user.id,
+                    company_id: id
                 })
                 onAddReview(newReview)
-                window.location.reload(false)
+                // window.location.reload(false)
                 
             })
     }

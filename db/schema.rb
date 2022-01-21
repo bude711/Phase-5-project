@@ -17,6 +17,7 @@ ActiveRecord::Schema.define(version: 2022_01_14_205717) do
 
   create_table "companies", force: :cascade do |t|
     t.string "name"
+    t.string "img_url"
     t.string "edi_statement"
     t.string "bipoc_info"
     t.string "gender_info"

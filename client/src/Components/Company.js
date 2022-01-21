@@ -57,6 +57,7 @@ function Company({user, onDeleteReview}) {
   return (
     <section className="container">
       <div className="card">
+      <img src={company.img_url} width="400" height="200" alt={company.name} />
         <h1>
           {company.name} 
         </h1>

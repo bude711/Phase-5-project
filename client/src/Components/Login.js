@@ -8,7 +8,7 @@ function Login({ onLogin }) {
 
   return (
     <div >
-      <h1>App name here</h1>
+      <h1>transparency</h1>
       {showLogin ? (
         <>
           <LoginForm onLogin={onLogin} />
