@@ -16,7 +16,7 @@ function App() {
 
   useEffect(() => {
     // auto-login
-    fetch("http://localhost:4000/api/me").then((r) => {
+    fetch("/api/me").then((r) => {
       if (r.ok) {
         r.json().then((user) => setUser(user))
       }
@@ -24,7 +24,7 @@ function App() {
   }, []);
 
   useEffect(() => {
-    fetch("api/companies")
+    fetch("/api/companies")
       .then((r) => r.json())
       .then(setCompany);
 

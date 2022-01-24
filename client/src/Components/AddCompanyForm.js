@@ -31,7 +31,7 @@ function AddCompanyForm({ onAddCompany}) {
         const newCompany = {
             ...companyFormData}
 
-        fetch(`http://localhost:4000/api/companies`, {
+        fetch(`/api/companies`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -59,7 +59,7 @@ function AddCompanyForm({ onAddCompany}) {
     }
 
     return (
-
+        <>
         <div className="container">
             <form onSubmit={handleSubmit} className="add-company-form">
             <br></br>
@@ -166,6 +166,7 @@ function AddCompanyForm({ onAddCompany}) {
                
                    </form>
         </div>
+        </>
     )
 }
 

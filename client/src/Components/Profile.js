@@ -5,7 +5,7 @@ function Profile() {
   const [user, setUser] = useState([]);
 
   useEffect(() => {
-    fetch("api/me")
+    fetch("/api/me")
       .then((res) => res.json())
       .then((data) => setUser(data));
   }, []);
@@ -13,6 +13,7 @@ function Profile() {
   const values = Object.values(user);
 
   return (
+    <>
     <div className="App">
           <br></br>
           First Name:{values[1]}
@@ -24,6 +25,7 @@ function Profile() {
           Email: {values[5]}
           <br></br>
     </div>
+    </>
   );
 }
 

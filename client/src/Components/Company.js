@@ -13,7 +13,7 @@ function Company({user, onDeleteReview}) {
 
 
   useEffect(() => {
-    fetch(`http://localhost:4000/api/companies/${id}`).then((r) => {
+    fetch(`/api/companies/${id}`).then((r) => {
       if (r.ok) {
         r.json().then((company) =>
           setCompany({ data: company, error: null, status: "resolved" })
@@ -40,7 +40,7 @@ function Company({user, onDeleteReview}) {
   }
 
   function handleDeleteClick(id) {
-    fetch(`http://localhost:4000/api/reviews/${id}`, {
+    fetch(`/api/reviews/${id}`, {
       method: "DELETE",
     }).then((r) => {
       if (r.ok) {

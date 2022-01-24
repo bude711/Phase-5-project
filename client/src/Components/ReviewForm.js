@@ -24,7 +24,7 @@ function ReviewForm({ onAddReview, user}) {
         const newReview = {
             ...reviewFormData}
 
-        fetch(`http://localhost:4000/api/reviews`, {
+        fetch(`/api/reviews`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
