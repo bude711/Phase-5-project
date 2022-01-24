@@ -26,7 +26,7 @@ function Login({ onLogin }) {
           <br />
           <p>
             Already have an account? &nbsp;
-            <button as={Link} to="/companies" onClick={() => setShowLogin(true)}>
+            <button className="login-button" as={Link} to="/companies" onClick={() => setShowLogin(true)}>
               Log In
             </button>
           </p>

@@ -21,12 +21,12 @@ const navigate = useNavigate();
     
           <>
           <h1>transparency</h1>
-           <div> 
+           <div className="navbar-buttons"> 
 
                 <Link to="/"><button>Home</button></Link>
                 <Link to="/new"><button>Add A Company</button></Link>
                 <Link to="/profile"><button>Profile</button></Link>
-                <button onClick={handleLogoutClick}>Logout</button>
+                <button className="logout-button" onClick={handleLogoutClick}>Logout</button>
                 
           </div>
       

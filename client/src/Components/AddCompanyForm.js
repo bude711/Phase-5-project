@@ -68,9 +68,10 @@ function AddCompanyForm({ onAddCompany}) {
                     name="img_url"
                     onChange={handleChange}
                     value={companyFormData.img_url}
-                    placeholder="company image"
+                    placeholder="company image url"
                     className="input-text"
                 />
+                <br></br>
                 <br></br>
                 <input 
                     type="text"
@@ -81,6 +82,7 @@ function AddCompanyForm({ onAddCompany}) {
                     className="input-text"
                 />
                  <br></br>
+                 <br></br>
                 <input 
                     type="text"
                     name="location"
@@ -89,6 +91,7 @@ function AddCompanyForm({ onAddCompany}) {
                     placeholder="location"
                     className="input-text"
                 />
+                 <br></br>
                  <br></br>
                 <input 
                     type="text"
@@ -99,6 +102,7 @@ function AddCompanyForm({ onAddCompany}) {
                     className="input-text"
                 />
                  <br></br>
+                 <br></br>
                 <input 
                     type="text"
                     name="size"
@@ -107,6 +111,7 @@ function AddCompanyForm({ onAddCompany}) {
                     placeholder="staff size"
                     className="input-text"
                 />
+                 <br></br>
                  <br></br>
                 <input 
                     type="text"
@@ -117,6 +122,7 @@ function AddCompanyForm({ onAddCompany}) {
                     className="input-text"
                 />
                  <br></br>
+                 <br></br>
                 <input 
                     type="text"
                     name="edi_statement"
@@ -125,6 +131,7 @@ function AddCompanyForm({ onAddCompany}) {
                     placeholder="edi statement"
                     className="input-text"
                 />
+                 <br></br>
                  <br></br>
                 <input 
                     type="text"
@@ -135,6 +142,7 @@ function AddCompanyForm({ onAddCompany}) {
                     className="input-text"
                 />
                  <br></br>
+                 <br></br>
                 <input 
                     type="text"
                     name="gender_info"
@@ -143,6 +151,7 @@ function AddCompanyForm({ onAddCompany}) {
                     placeholder="gender info"
                     className="input-text"
                 />
+                 <br></br>
                  <br></br>
                 <input 
                     type="text"
@@ -153,6 +162,7 @@ function AddCompanyForm({ onAddCompany}) {
                     className="input-text"
                 />
                  <br></br>
+                 <br></br>
                 <input 
                     type="text"
                     name="disability_info"
@@ -162,7 +172,8 @@ function AddCompanyForm({ onAddCompany}) {
                     className="input-text"
                 />
                  <br></br>
-                <button  type="submit"> Submit </button>
+                 <br></br>
+                <button  className="submit_button" type="submit"> Submit </button>
                
                    </form>
         </div>

@@ -29,7 +29,7 @@ function LoginForm({ onLogin }) {
 
   return (
     <div className="container">
-    <form onSubmit={handleSubmit}>
+    <form className="signup-form" onSubmit={handleSubmit}>
         <h3>Username</h3>
         <input
           type="text"
@@ -37,6 +37,7 @@ function LoginForm({ onLogin }) {
           autoComplete="off"
           value={username}
           onChange={(e) => setUsername(e.target.value)}
+          className="input-text-login"
         />
          <br />
       
@@ -47,11 +48,12 @@ function LoginForm({ onLogin }) {
           autoComplete="current-password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
+          className="input-text-login"
         />
      
      <br />
-      
-        <button variant="fill" color="primary" type="submit">
+      <br/>
+        <button className="login" type="submit">
           {isLoading ? "Loading..." : "Login"}
         </button>
       

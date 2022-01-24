@@ -42,9 +42,9 @@ function SignUpForm({ onLogin }) {
   }
 
   return (
-      <div>
+      <div className="signup-form">
      <form onSubmit={handleSubmit}>
-        <h1>Sign Up</h1>
+        <h2>Sign Up</h2>
       
         <label htmlFor="firstName">First Name</label>
         &nbsp;
@@ -114,7 +114,7 @@ function SignUpForm({ onLogin }) {
       <p></p>
     
      
-      <button type="submit">{isLoading ? "Loading..." : "Sign Up"}</button>
+      <button className="signup-button" type="submit">{isLoading ? "Loading..." : "Sign Up"}</button>
         {errors.map((err) => (
           <p key={err}>{err}</p>
         ))}

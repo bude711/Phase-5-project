@@ -45,7 +45,7 @@ function Company({user, onDeleteReview}) {
     }).then((r) => {
       if (r.ok) {
         onDeleteReview(id)
-        window.location.reload(false)
+        // window.location.reload(false)
       }
     })
   }
@@ -56,26 +56,31 @@ function Company({user, onDeleteReview}) {
 
   return (
     <section className="container">
-      <div className="card">
-      <img src={company.img_url} width="400" height="200" alt={company.name} />
+      <div key={company.id} className="company-card">
+      <img className="company-img" src={company.img_url} width="400" height="200" alt={company.name} />
         <h1>
           {company.name} 
         </h1>
-        <p>{company.location} :  {company.website} : {company.size} : Networth: {company.networth}</p>
-        <p>EDI Statement: {company.edi_statement}</p>
+        <p className="company-info">{company.location} :  {company.website} : {company.size} : Networth {company.networth}</p>
+        <h4>EDI Statement: </h4>
+          <p>{company.edi_statement}</p>
         <p>BIPOC info: {company.bipoc_info}</p>
-        <p>Gender info: {company.gender_info}</p>
-        <p>LGBTQIA+ info: {company.lgbtqia_info}</p>
-        <p>Disability info: {company.disability_info}</p>
+        <h4>Gender info:</h4>
+        <p>{company.gender_info}</p>
+        <h4>LGBTQIA+ info</h4>
+        <p>{company.lgbtqia_info}</p>
+        <h4>Disability info</h4>
+        <p>{company.disability_info}</p>
       </div>
-      <div className="card">
+      <div className="review-card">
         <h2>Reviews</h2>
         {company.reviews?.map((review) => (
-          <div key={review.id}>
+          <div className="review" key={review.id}>
             <em>{review.comment}</em> 
-           
+            &nbsp;
               <em>{review.rating}/5</em>
-          <button onClick={() => handleDeleteClick(review.id)}>Delete review</button>
+              &nbsp;
+          <button className="delete-button" onClick={() => handleDeleteClick(review.id)}>Delete review</button>
           </div>
         ))}
       </div>

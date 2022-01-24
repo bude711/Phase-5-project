@@ -14,7 +14,7 @@ function Profile() {
 
   return (
     <>
-    <div className="App">
+    <div className="profile">
           <br></br>
           First Name:{values[1]}
           <br />

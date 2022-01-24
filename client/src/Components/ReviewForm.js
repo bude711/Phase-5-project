@@ -47,7 +47,7 @@ function ReviewForm({ onAddReview, user}) {
 
     return (
 
-        <div className="container">
+        <div className="review-form">
             <form onSubmit={handleSubmit} className="add-review-form">
                 <input 
                     type="text"
@@ -57,7 +57,8 @@ function ReviewForm({ onAddReview, user}) {
                     placeholder="Add Comment here..."
                     className="input-text"
                 />
-
+            &nbsp;
+            
                 <input 
                     type="number"
                     name="rating"
@@ -68,8 +69,8 @@ function ReviewForm({ onAddReview, user}) {
                     placeholder="0"
                     className="input-text"
                 />
-
-                <button  type="submit"> Submit </button>
+            &nbsp;
+                <button className="review-submit" type="submit"> Submit </button>
                
                    </form>
         </div>
