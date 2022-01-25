@@ -1,14 +1,19 @@
-body{
-  margin: 10px;
-  /* background: linear-gradient(to bottom, #003464 0%,#05b4d3 100%); */
-  color: white;
-  background-color: #0095b3;
-opacity: 1;
-background-image: radial-gradient(circle at center center, #d2f8ff, #04afd1), repeating-radial-gradient(circle at center center, #d2f8ff, #d2f8ff, 40px, transparent 80px, transparent 40px);
-background-blend-mode: multiply;
-overflow:visible;
-font-family: 'Courier New', Courier, monospace;
+*{
+  margin: 0;
+  padding: 0;
+  
 }
+
+body{
+  /* margin: 10px; */
+  /* background: linear-gradient(to bottom, #003464 0%,#05b4d3 100%); */
+  background-color: rgb(205, 233, 245);;
+  color: rgb(9, 100, 139);
+  /* background: radial-gradient(circle, rgba(0,154,222,0.8239670868347339) 49%, rgba(3,95,136,0.8099614845938375) 100%); */
+  overflow:visible;
+  font-family: 'Courier New', Courier, monospace;
+}
+
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
@@ -51,7 +56,6 @@ position: absolute;
   right: 40%;
   bottom: 20%;
   left: 15%;
-
 }
 
 .loginpage, .signuppage {
@@ -70,6 +74,8 @@ button{
   border: 1px solid transparent;
   border-radius: 6px;
   padding: 5px 10px;
+  color: rgb(9, 100, 139);
+  background-color: white;
 }
 
 
@@ -87,18 +93,56 @@ button:hover{
 
 header{
   font-size: 2rem;
-    /* border-bottom: 1px #ccc solid;
-    background: white;
-    color: #04afd1;
+    border-bottom: 1px #ccc solid;
+    background-color: white;
+    color: rgb(9, 100, 139);
     padding: 1rem;
     display: flex;
     align-items: center;
-    justify-content: space-between; */
+    justify-content: space-between;
+    font-weight: bold;
 
 }
 
-/* .homebutton, .addcompanybutton, .profilebutton, .logoutbutton{
-  position: absolute;
-  left: 10%
+.homebutton, .addcompanybutton, .profilebutton, .logoutbutton{
+  background-color: rgb(9, 100, 139);
+  color: white;
+  margin-left: 5px
+}
 
+.company-card{
+  margin: 10px;
+ 
+}
+
+/* p{
+  display: flex;
+  align-items: center;
+  justify-content: center;
 } */
+
+.add-company-form{
+  margin: 10px;
+  box-align:center
+}
+
+
+.input-text-company{
+  border-radius: 6px;
+  border: 1px solid transparent;
+  border-color: #dbdbdb;
+  -webkit-appearance: none;
+  max-width: 100%;
+  width: 18rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  padding: 4px;
+  resize: none;
+}
+
+.addcompanytitle{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px
+}

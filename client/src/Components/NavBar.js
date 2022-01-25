@@ -17,18 +17,18 @@ const navigate = useNavigate();
     return(
         <header> transparency &nbsp; 
 
-          {/* <h1>transparency</h1> */}
-           {/* <div className="navbar-buttons">  */}
+          
+           <div className="navbar-buttons"> 
         
-                <Link to="/" className="homebutton"><button>Home</button></Link>
+                <Link to="/" ><button className="homebutton" >Home</button></Link>
                 
-                <Link to="/new" className="addcompanybutton"><button>Add A Company</button></Link>
+                <Link to="/new" ><button className="addcompanybutton" >Add A Company</button></Link>
 
-                <Link to="/profile" className="profilebutton"><button>Profile</button></Link>
+                <Link to="/profile" ><button className="profilebutton" >Profile</button></Link>
                 
                 <button className="logoutbutton" onClick={handleLogoutClick}>Logout</button>
                 
-          {/* </div> */}
+          </div>
     
     </header>
 

@@ -60,7 +60,8 @@ function AddCompanyForm({ onAddCompany}) {
 
     return (
         <>
-        <div className="container">
+        <div className="addcompanycontainer">
+            <h2 className="addcompanytitle">New Company Form</h2>
             <form onSubmit={handleSubmit} className="add-company-form">
             <br></br>
                 <input 
@@ -69,7 +70,7 @@ function AddCompanyForm({ onAddCompany}) {
                     onChange={handleChange}
                     value={companyFormData.img_url}
                     placeholder="company image url"
-                    className="input-text"
+                    className="input-text-company"
                 />
                 <br></br>
                 <br></br>
@@ -79,7 +80,7 @@ function AddCompanyForm({ onAddCompany}) {
                     onChange={handleChange}
                     value={companyFormData.name}
                     placeholder="company name"
-                    className="input-text"
+                    className="input-text-company"
                 />
                  <br></br>
                  <br></br>
@@ -89,7 +90,7 @@ function AddCompanyForm({ onAddCompany}) {
                     onChange={handleChange}
                     value={companyFormData.location}
                     placeholder="location"
-                    className="input-text"
+                    className="input-text-company"
                 />
                  <br></br>
                  <br></br>
@@ -99,7 +100,7 @@ function AddCompanyForm({ onAddCompany}) {
                     onChange={handleChange}
                     value={companyFormData.website}
                     placeholder="website"
-                    className="input-text"
+                    className="input-text-company"
                 />
                  <br></br>
                  <br></br>
@@ -109,7 +110,7 @@ function AddCompanyForm({ onAddCompany}) {
                     onChange={handleChange}
                     value={companyFormData.size}
                     placeholder="staff size"
-                    className="input-text"
+                    className="input-text-company"
                 />
                  <br></br>
                  <br></br>
@@ -119,7 +120,7 @@ function AddCompanyForm({ onAddCompany}) {
                     onChange={handleChange}
                     value={companyFormData.networth}
                     placeholder="networth"
-                    className="input-text"
+                    className="input-text-company"
                 />
                  <br></br>
                  <br></br>
@@ -129,7 +130,7 @@ function AddCompanyForm({ onAddCompany}) {
                     onChange={handleChange}
                     value={companyFormData.edi_statement}
                     placeholder="edi statement"
-                    className="input-text"
+                    className="input-text-company"
                 />
                  <br></br>
                  <br></br>
@@ -139,7 +140,7 @@ function AddCompanyForm({ onAddCompany}) {
                     onChange={handleChange}
                     value={companyFormData.bipoc_info}
                     placeholder="bipoc info"
-                    className="input-text"
+                    className="input-text-company"
                 />
                  <br></br>
                  <br></br>
@@ -149,7 +150,7 @@ function AddCompanyForm({ onAddCompany}) {
                     onChange={handleChange}
                     value={companyFormData.gender_info}
                     placeholder="gender info"
-                    className="input-text"
+                    className="input-text-company"
                 />
                  <br></br>
                  <br></br>
@@ -159,7 +160,7 @@ function AddCompanyForm({ onAddCompany}) {
                     onChange={handleChange}
                     value={companyFormData.lgbtqia_info}
                     placeholder="lgbtqia info"
-                    className="input-text"
+                    className="input-text-company"
                 />
                  <br></br>
                  <br></br>
@@ -169,11 +170,11 @@ function AddCompanyForm({ onAddCompany}) {
                     onChange={handleChange}
                     value={companyFormData.disability_info}
                     placeholder="disability info"
-                    className="input-text"
+                    className="input-text-company"
                 />
                  <br></br>
                  <br></br>
-                <button  className="submit_button" type="submit"> Submit </button>
+                <button  className="submit_button" type="submit"> Submit Company </button>
                
                    </form>
         </div>
