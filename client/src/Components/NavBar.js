@@ -15,24 +15,21 @@ const navigate = useNavigate();
   
 
     return(
-        <header>
-     
-      <div>
-    
-          <>
-          <h1>transparency</h1>
-           <div className="navbar-buttons"> 
+        <header> transparency &nbsp; 
 
-                <Link to="/"><button>Home</button></Link>
-                <Link to="/new"><button>Add A Company</button></Link>
-                <Link to="/profile"><button>Profile</button></Link>
-                <button className="logout-button" onClick={handleLogoutClick}>Logout</button>
-                
-          </div>
-      
-          </>
+          {/* <h1>transparency</h1> */}
+           {/* <div className="navbar-buttons">  */}
         
-      </div>
+                <Link to="/" className="homebutton"><button>Home</button></Link>
+                
+                <Link to="/new" className="addcompanybutton"><button>Add A Company</button></Link>
+
+                <Link to="/profile" className="profilebutton"><button>Profile</button></Link>
+                
+                <button className="logoutbutton" onClick={handleLogoutClick}>Logout</button>
+                
+          {/* </div> */}
+    
     </header>
 
     )

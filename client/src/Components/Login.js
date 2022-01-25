@@ -8,20 +8,20 @@ function Login({ onLogin }) {
 
   return (
     <div >
-      <h1>transparency</h1>
+      <h1 className="setpage">transparency</h1>
       {showLogin ? (
-        <>
+        <div className="loginpage">
           <LoginForm onLogin={onLogin} />
           <br />
-          <p>
+          <p className="donthaveanaccount">
             Don't have an account? &nbsp;
             <button as={Link} to="/companies" onClick={() => setShowLogin(false)}>
               Sign Up
             </button>
           </p>
-        </>
+        </div>
       ) : (
-        <>
+        <div className="signuppage">
           <SignupForm onLogin={onLogin} />
           <br />
           <p>
@@ -30,7 +30,7 @@ function Login({ onLogin }) {
               Log In
             </button>
           </p>
-        </>
+        </div>
       )}
     </div>
   );

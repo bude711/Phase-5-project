@@ -4,7 +4,7 @@ body{
   color: white;
   background-color: #0095b3;
 opacity: 1;
-background-image: radial-gradient(circle at center center, #d2f8ff, #0095b3), repeating-radial-gradient(circle at center center, #d2f8ff, #d2f8ff, 40px, transparent 80px, transparent 40px);
+background-image: radial-gradient(circle at center center, #d2f8ff, #04afd1), repeating-radial-gradient(circle at center center, #d2f8ff, #d2f8ff, 40px, transparent 80px, transparent 40px);
 background-blend-mode: multiply;
 overflow:visible;
 font-family: 'Courier New', Courier, monospace;
@@ -28,19 +28,77 @@ code {
   resize: none;
 }
 
-.input-text-login{
+.input-text-login, .input-text-signup{
   border-radius: 6px;
   border: 1px solid transparent;
   border-color: #dbdbdb;
   -webkit-appearance: none;
   max-width: 100%;
-  width: 40%;
+  width: 18rem;
   font-size: 1rem;
   line-height: 1.5;
   padding: 4px;
   resize: none;
+  
+}
+
+.setpage{
+  /* float: left;
+padding: 140px; */
+font-size:3.5rem;
+position: absolute;
+  top: 10%;
+  right: 40%;
+  bottom: 20%;
+  left: 15%;
+
+}
+
+.loginpage, .signuppage {
+/* float: right;
+padding: 100px */
+position: absolute;
+  top: 20%;
+  right: 5%;
+  bottom: 20%;
+  left: 60%;
+}
+
+button{
+  cursor: pointer;
+  font-size: .85rem;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  padding: 5px 10px;
 }
 
 
+button:hover{
+  cursor: pointer;
+  font-size: 1rem;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  padding: 7px 14px;
+}
 
+.donthaveanaccount{
+  font-size: 1rem;
+}
 
+header{
+  font-size: 2rem;
+    /* border-bottom: 1px #ccc solid;
+    background: white;
+    color: #04afd1;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; */
+
+}
+
+/* .homebutton, .addcompanybutton, .profilebutton, .logoutbutton{
+  position: absolute;
+  left: 10%
+
+} */

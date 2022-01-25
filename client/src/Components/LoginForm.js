@@ -29,7 +29,7 @@ function LoginForm({ onLogin }) {
 
   return (
     <div className="container">
-    <form className="signup-form" onSubmit={handleSubmit}>
+    <form className="login-form" onSubmit={handleSubmit}>
         <h3>Username</h3>
         <input
           type="text"

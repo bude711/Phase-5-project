@@ -44,71 +44,73 @@ function SignUpForm({ onLogin }) {
   return (
       <div className="signup-form">
      <form onSubmit={handleSubmit}>
-        <h2>Sign Up</h2>
-      
-        <label htmlFor="firstName">First Name</label>
-        &nbsp;
+        <h3>First Name</h3>
         <input
           type="text"
           id="firstName"
           autoComplete="off"
           value={firstName}
           onChange={(e) => setFirstName(e.target.value)}
+          className="input-text-signup"
         />
       <br/>
       <p></p>
-        <label htmlFor="lastName">Last Name</label>
-        &nbsp;
+        <h3>Last Name</h3>
+       
         <input
           type="text"
           id="lastName"
           autoComplete="off"
           value={lastName}
           onChange={(e) => setLastName(e.target.value)}
+          className="input-text-signup"
         />
         <br/>
       <p></p>
-        <label htmlFor="email">Email</label>
-        &nbsp;
+        <h3>Email</h3>
+        
           <input
             type="text"
             id="email"
             autoComplete="off"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
+            className="input-text-signup"
           />
         <br/>
       <p></p>
-        <label htmlFor="username">Username</label>
-        &nbsp;
+        <h3>Username</h3>
+       
         <input
           type="text"
           id="username"
           autoComplete="off"
           value={username}
           onChange={(e) => setUsername(e.target.value)}
+          className="input-text-signup"
         />
       <br/>
       <p></p>
-        <label htmlFor="password">Password</label>
-        &nbsp;
+        <h3>Password</h3>
         <input
           type="password"
           id="password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
           autoComplete="current-password"
+          className="input-text-signup"
         />
       <br/>
       <p></p>
-        <label htmlFor="password">Password Confirmation</label>
-        &nbsp;
+        <h3>Password Confirmation</h3>
+       
         <input
           type="password"
           id="password_confirmation"
           value={passwordConfirmation}
           onChange={(e) => setPasswordConfirmation(e.target.value)}
           autoComplete="current-password"
+          className="input-text-signup"
         />
         <br/>
       <p></p>
