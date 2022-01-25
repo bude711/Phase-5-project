@@ -16,11 +16,11 @@ function Profile() {
     <>
     <div className="profile">
           <br></br>
-          First Name:{values[1]}
+          First Name: {values[1]}
           <br />
           Last Name: {values[2]}
           <br />
-          Username:{values[3]}
+          Username: {values[3]}
           <br />
           Email: {values[5]}
           <br></br>

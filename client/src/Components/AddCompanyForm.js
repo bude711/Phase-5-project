@@ -124,59 +124,65 @@ function AddCompanyForm({ onAddCompany}) {
                 />
                  <br></br>
                  <br></br>
-                <input 
+                <textarea
                     type="text"
                     name="edi_statement"
+                    rows="10"
                     onChange={handleChange}
                     value={companyFormData.edi_statement}
-                    placeholder="edi statement"
-                    className="input-text-company"
+                    placeholder="diversity statement"
+                    className="textarea"
                 />
                  <br></br>
                  <br></br>
-                <input 
+                <textarea 
                     type="text"
+                    rows="10"
                     name="bipoc_info"
                     onChange={handleChange}
                     value={companyFormData.bipoc_info}
                     placeholder="bipoc info"
-                    className="input-text-company"
+                    className="textarea"
                 />
                  <br></br>
                  <br></br>
-                <input 
+                <textarea 
                     type="text"
                     name="gender_info"
                     onChange={handleChange}
                     value={companyFormData.gender_info}
                     placeholder="gender info"
-                    className="input-text-company"
+                    className="textarea"
+                    rows="10"
                 />
                  <br></br>
                  <br></br>
-                <input 
+                <textarea 
                     type="text"
                     name="lgbtqia_info"
                     onChange={handleChange}
                     value={companyFormData.lgbtqia_info}
-                    placeholder="lgbtqia info"
-                    className="input-text-company"
+                    placeholder="lgbtqia+ info"
+                    className="textarea"
+                    rows="10"
                 />
                  <br></br>
                  <br></br>
-                <input 
+                <textarea
                     type="text"
                     name="disability_info"
                     onChange={handleChange}
                     value={companyFormData.disability_info}
                     placeholder="disability info"
-                    className="input-text-company"
+                    className="textarea"
+                    rows="10"
                 />
                  <br></br>
                  <br></br>
                 <button  className="submit_button" type="submit"> Submit Company </button>
-               
+                
                    </form>
+                   
         </div>
         </>
     )
