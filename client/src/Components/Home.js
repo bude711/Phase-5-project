@@ -1,8 +1,12 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
+
+
 function Home() {
   const [companies, setCompanies] = useState([]);
+
+ 
 
   useEffect(() => {
     fetch("/api/companies")
@@ -11,21 +15,24 @@ function Home() {
   }, []);
 
 
+
   return (
-    <section className="container">
+    <div className="cards">
+
+     
       {companies.map((company) => (
         <div key={company.id} className="company-card">
           
             <Link to={`/companies/${company.id}`}>
-            <img src={company.img_url} width="350" height="200" alt={company.name} />
-            {/* <p>{company.name}</p> */}
+            <img className="companycardimage" src={company.img_url} width="300" height="241" alt={company.name} />
             </Link>
-            <p>{company.name}</p>
-            <p>{company.location}</p>
+            <p className="homename">{company.name}</p>
+            <p className="homename">{company.location}</p>
+            <br></br>
           
         </div>
       ))}
-    </section>
+    </div>
   );
 }
 

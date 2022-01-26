@@ -14,6 +14,7 @@ function App() {
   const [reviews, setReviews] = useState([])
   const [company, setCompany] = useState([])
 
+
   useEffect(() => {
     // auto-login
     fetch("/api/me").then((r) => {
@@ -29,6 +30,7 @@ function App() {
       .then(setCompany);
 
   }, []);
+
 
   function handleAddCompany(newCompany) {
     setCompany((company) => [...company, newCompany]);
@@ -57,6 +59,20 @@ function App() {
               </Route>
         </Routes>
       </main>
+      <div className="flex-wrapper">
+      <footer>
+        <div className="footer">
+            <p className="footernote">Thank you for visiting my application!</p>
+            <br></br>
+            <p className="followme" >Follow me at the links below:</p>
+            <br></br>
+            <div className="footerlinks">
+            <a className="github" href="https://github.com/bude711">Github</a> &nbsp;|&nbsp;
+            <a className="linkedin" href="https://www.linkedin.com/in/brandi-ude-25767b153/">Linkedin</a>
+            </div>
+         </div>
+      </footer>
+      </div>
     </>
   );
 }

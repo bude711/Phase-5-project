@@ -179,7 +179,7 @@ function AddCompanyForm({ onAddCompany}) {
                 />
                  <br></br>
                  <br></br>
-                <button  className="submit_button" type="submit"> Submit Company </button>
+                <button  className="new_company_submit_button" type="submit"> Submit Company </button>
                 
                    </form>
                    

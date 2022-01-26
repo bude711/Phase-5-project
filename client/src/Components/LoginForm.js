@@ -40,7 +40,7 @@ function LoginForm({ onLogin }) {
           className="input-text-login"
         />
          <br />
-      
+      <br></br>
         <h3>Password</h3>
         <input
           type="password"

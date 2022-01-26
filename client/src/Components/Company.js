@@ -55,7 +55,7 @@ function Company({user, onDeleteReview}) {
   if (status === "rejected") return <h1>Error: {error.error}</h1>;
 
   return (
-    <section className="container">
+    <div className="card">
       <div key={company.id} className="company-detail">
       <img className="company-img" src={company.img_url} width="400" height="200" alt={company.name} />
         <h1>
@@ -88,7 +88,7 @@ function Company({user, onDeleteReview}) {
         <h4>Add New Review</h4>
         <ReviewForm user={user} onAddReview={handleAddReview} />
       </div>
-    </section>
+    </div>
   );
 }
 

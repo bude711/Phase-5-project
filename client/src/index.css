@@ -6,11 +6,14 @@
 body{
   /* margin: 10px; */
   /* background: linear-gradient(to bottom, #003464 0%,#05b4d3 100%); */
-  background-color: rgb(205, 233, 245);;
+  /* background-color: rgb(205, 233, 245);; */
   color: rgb(9, 100, 139);
   /* background: radial-gradient(circle, rgba(0,154,222,0.8239670868347339) 49%, rgba(3,95,136,0.8099614845938375) 100%); */
   overflow:visible;
   font-family: 'Courier New', Courier, monospace;
+  background-image: url("images/blueclouds.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 
@@ -93,7 +96,7 @@ button:hover{
 
 header{
   font-size: 2rem;
-    border-bottom: 1px #ccc solid;
+    border-bottom: 2px #ccc solid;
     background-color: white;
     color: rgb(9, 100, 139);
     padding: 1rem;
@@ -105,16 +108,19 @@ header{
 
 }
 
-.homebutton, .addcompanybutton, .profilebutton, .logoutbutton{
+.homebutton, .addcompanybutton, .profilebutton, .logoutbutton, .new_company_submit_button{
   background-color: rgb(9, 100, 139);
   color: white;
   margin-left: 5px
 }
 
-/* .company-card{
+.companycontainer {
   margin: 10px;
- 
-} */
+  box-shadow: 0 0 7px 0 #ddd;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  width: 300px;
+}
 
 /* p{
   display: flex;
@@ -170,3 +176,51 @@ header{
   margin: 10px;
   font-size: 1.5rem
 }
+
+footer{
+    font-size: 1rem;
+    border-top: 2px #ccc solid;
+    background-color: rgb(9, 100, 139);
+    color: white;
+    padding: 3rem;
+    display: flex; 
+    justify-content: center;
+    font-weight: bold;
+    font-style: italic;
+    bottom:0px
+
+}
+
+.footerlinks, .followme {
+  display: flex; 
+    justify-content: center;
+    color: white;
+}
+.github:hover, .linkedin:hover{
+font-size:1.25rem
+}
+
+
+
+.cards {
+  list-style: none;
+  margin: 15px;
+  justify-content: space-between;
+}
+.companycardimage:hover{
+  box-shadow: 7px 4px 4px rgb(116, 119, 122);
+}
+
+@media (min-width: 768px) {
+  .cards {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.homename{
+  display: flex; 
+    justify-content: center;
+    font-weight: bold;
+}
+
