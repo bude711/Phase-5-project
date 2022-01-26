@@ -5,9 +5,13 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+
 User.destroy_all
 Company.destroy_all
 Review.destroy_all
+
+
 puts "seeds destroyed"
 
 puts "seeding users..."
@@ -23,6 +27,18 @@ c3=Company.create(name: "IBM", img_url: "https://upload.wikimedia.org/wikipedia/
 c4=Company.create(name: "Apple", img_url: "https://1000logos.net/wp-content/uploads/2016/10/Apple-logo.jpg", edi_statement:"Across Apple, we’ve strengthened our long-standing commitment to making our company more inclusive and the world more just. Where every great idea can be heard. And everybody belongs.", bipoc_info:"27% Asian, 9% Black, 14% Hispanic/Latinx, 1% Indigenous, 3% Multiracial, 47% White", gender_info:"34% Female, 66% Male", lgbtqia_info: "N/A", disability_info:"N/A", location: "Cupertine, California", website: "apple.com", size: "147,000 full-time staff", networth:"$2948 Billion")
 
 c5=Company.create(name: "Microsoft", img_url: "https://www.zdnet.com/a/img/resize/603f25543fc9ca75884bb638781f51f1f31c35f0/2014/08/27/0d77a99a-2da9-11e4-9e6a-00505685119a/microsofts-logo-gets-a-makeover.jpg?auto=webp&width=1092", edi_statement: "Our mission is deeply inclusive: empower every person and every organization on the planet to achieve more. We expect each of us—no matter what our level, role or function is—to play an active role in creating environments where people of a diverse range of backgrounds are excited to bring all of who they are and do their best work." ,bipoc_info:"4.9% Black or African American, 6.6% Hispanic and Latinx, 0.7% Native American, Alaska Native, and Pacific Islander, 34.7% Asian ", gender_info:"28.6% women", lgbtqia_info: "N/A", disability_info:"6.1% identify as having a disability", location: "Redmond, WA", website: "microsoft.com", size: "181,000 full-time employees", networth:"$141.988 billion")
+
+
+
+
+c6=Company.create(name: "Intel", img_url:"https://upload.wikimedia.org/wikipedia/commons/2/25/Intel_logo_%282006-2020%29.jpg", edi_statement: "At Intel, we are committed to advancing diversity and inclusion at every level in our company and the broader industry. It is foundational to our business and purpose - to create world-changing technology that enriches the lives of every person on earth. ", bipoc_info:"45.8% White, 37.6% Asian, 10.5% Hispanic/Latinx, 4.9% African American, 0.8% Native American, 0.4% Pacific Islander. ", gender_info: "26.3% Women, 73.7% Men", lgbtqia_info: "N/A" , disability_info: "N/A", location: "Santa Clara, California", website: "Intel.com", size:"110,600 full-time employees" , networth:"$213 Billion")
+
+c7=Company.create(name: "Sony", img_url:"https://logodix.com/logo/329064.jpg", edi_statement: "It is in Sony's DNA - and a source of our innovation - to value different perspectives and backgrounds as we conduct our business activities globally and rise to new challenges. Sony promotes diversity across the Sony Group as a key management strategy by ensuring an inclusive work environment and by recruiting, hiring, training and promoting employees from diverse backgrounds.", bipoc_info:" 49.2% ethnic minorities", gender_info: "33.3% female", lgbtqia_info: "N/A" , disability_info: "N/A", location: "Minato City, Tokyo, Japan", website: "sony.com", size:"Approx. 111,700 full-time employees" , networth:"$10.77 Billion")
+   
+c8=Company.create(name: "Amazon", img_url:"https://thumbs.dreamstime.com/b/amazon-logo-editorial-vector-illustration-market-136495269.jpg", edi_statement: "We are a company of builders who bring varying backgrounds, ideas, and points of view to inventing on behalf of our customers. Our diverse perspectives come from many sources including gender, race, age, national origin, sexual orientation, culture, education, and professional and life experience. We are committed to diversity and inclusion and always look for ways to scale our impact as we grow.", bipoc_info:"32.1% White, 13.6% Asian, 26.5% Black, 22.8% Latinx, 3.6% Multiracial, 1.5% Native American ", gender_info: "55.4% Men, 44.6% Women", lgbtqia_info: "N/A" , disability_info: "N/A", location: "Seattle, WA", website: "amazon.com", size:"Approx 798,000 full-time employees" , networth:"$1.65 Trillion")
+       
+c9=Company.create(name: "Dell", img_url:"https://logos-world.net/wp-content/uploads/2020/08/Dell-Logo-2016-present.jpg", edi_statement: "At Dell, we create opportunities for all employees to bring their ideas to the workplace in an environment that cultivates the exchange of broad thinking and inspires innovation. By embedding diversity and inclusion into our business, we help ensure that we serve customers globally in ways that best meet their needs. ", bipoc_info:"8.9% Hispanic or Latino, 5.3% Black or African American ", gender_info: "31.8% Women", lgbtqia_info: "N/A" , disability_info: "N/A", location: "Round Rock, TX", website: "dell.com", size:"Approx. 165,000 full-time employees" , networth:"58.6 Billion")
+
 
 puts "seeding reviews..."
 r1=Review.create(rating: 5, comment:"Worked here for 2 years and had a great time." , user_id: u1.id, company_id:c1.id)

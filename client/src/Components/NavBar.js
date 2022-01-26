@@ -16,10 +16,8 @@ const navigate = useNavigate();
   
 
     return(
-      
-        
-        <header> transparency &nbsp; 
 
+        <header> transparency &nbsp; 
           
            <div className="navbar-buttons"> 
         
