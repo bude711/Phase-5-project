@@ -55,7 +55,7 @@ function ReviewForm({ onAddReview, user}) {
                     onChange={handleChange}
                     value={reviewFormData.comment}
                     placeholder="Add Comment here..."
-                    className="input-text"
+                    className="input-comment"
                 />
             &nbsp;
             
@@ -67,7 +67,7 @@ function ReviewForm({ onAddReview, user}) {
                     onChange={handleChange}
                     value={reviewFormData.rating}
                     placeholder="0"
-                    className="input-text"
+                    className="input-rating"
                 />
             &nbsp;
                 <button className="review-submit" type="submit"> Submit </button>

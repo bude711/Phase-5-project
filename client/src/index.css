@@ -202,7 +202,7 @@ font-size:1.25rem
 
 
 
-.cards {
+.cards{
   list-style: none;
   margin: 15px;
   justify-content: space-between;
@@ -215,18 +215,119 @@ font-size:1.25rem
 .company-card{
   border-style: solid;
   margin-bottom: 10px;
+  border-radius: 25px;
+  border-color: rgb(9, 100, 139);
+  color: white;
+  background-color: rgb(9, 100, 139)
 }
-
+.companycardimage{
+  border-radius: 25px 25px 0px 0px;
+}
 @media (min-width: 768px) {
   .cards {
     display: flex;
     flex-wrap: wrap;
   }
 }
-
 .homename{
   display: flex; 
     justify-content: center;
     font-weight: bold;
 }
 
+
+
+.companydetailcard{
+  margin:10px
+
+}
+
+.company-img {
+  border-style: solid;
+  border-color: rgb(9, 100, 139);
+  /* position: absolute; */
+  /* top: 10%;
+  right: 60%;
+  bottom: 30%;
+  left: 15%; */
+}
+
+.company-info{
+  position: absolute;
+  top: 12%;
+  right: 10%;
+  bottom: 20%;
+  left: 40%;
+  font-weight: 600
+}
+
+.edititle, .demotitle{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  font-size: 1.4rem
+}
+
+.edistatement{
+  display: flex;
+  align-items: center;
+  text-align: center;
+  padding: 10px;
+  
+}
+
+.demographics{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.bipocinfo, .genderinfo, .lgbtinfo, .disabilityinfo{
+    /* display: inline-block; */
+    width: 300px; 
+    height: auto;
+    min-height: 100px;
+    margin-right: 10px; 
+    vertical-align: top;
+    padding:10px;
+     
+}
+
+.reviews-title{
+  padding:10px
+}
+
+.review{
+padding:10px
+}
+
+.review-form, .addareviewtitle{
+  padding:10px
+}
+
+.input-comment{
+  border-radius: 6px;
+  border: 1px solid transparent;
+  border-color: #dbdbdb;
+  -webkit-appearance: none;
+  max-width: 100%;
+  width: 18rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  padding: 4px;
+  resize: none;
+}
+.input-rating{
+  border-radius: 6px;
+  border: 1px solid transparent;
+  border-color: #dbdbdb;
+  -webkit-appearance: none;
+  max-width: 100%;
+  width: 3rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  padding: 4px;
+  resize: none;
+}
