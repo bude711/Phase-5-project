@@ -3,13 +3,15 @@ import { useParams } from "react-router-dom";
 import ReviewForm from "./ReviewForm";
 
 function Company({user, onDeleteReview}) {
+
+  const { id } = useParams();
   const [{ data: company, error, status }, setCompany] = useState({
     data: null,
     error: null,
     status: "pending",
   });
 
-  const { id } = useParams();
+ 
 
 
   useEffect(() => {
@@ -39,13 +41,18 @@ function Company({user, onDeleteReview}) {
     });
   }
 
-  function handleDeleteClick(id) {
-    fetch(`/api/reviews/${id}`, {
+
+
+
+
+
+  function handleDeleteClick(reviewId) {
+    fetch(`/api/reviews/${reviewId}`, {
       method: "DELETE",
     }).then((r) => {
       if (r.ok) {
         onDeleteReview(id)
-        // window.location.reload(false)
+        window.location.reload(false)
       }
     })
   }
@@ -55,7 +62,10 @@ function Company({user, onDeleteReview}) {
   if (status === "rejected") return <h1>Error: {error.error}</h1>;
 
   return (
+    <div>
+      {company ?
     <div className="companydetailcard">
+    
         <div key={company.id} className="company-basic-detail">
               <img className="company-img" src={company.img_url} width="400" height="200" alt={company.name} />
                 <div className="company-info">
@@ -122,6 +132,9 @@ function Company({user, onDeleteReview}) {
         <h4 className="addareviewtitle">Add A Review</h4>
         <ReviewForm user={user} onAddReview={handleAddReview} />
       </div>
+
+    </div>
+: null}
     </div>
   );
 }

@@ -40,7 +40,7 @@ function ReviewForm({ onAddReview, user}) {
                     company_id: id
                 })
                 onAddReview(newReview)
-                // window.location.reload(false)
+                window.location.reload(false)
                 
             })
     }
